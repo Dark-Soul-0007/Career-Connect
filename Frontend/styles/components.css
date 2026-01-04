@@ -1,0 +1,380 @@
+/* Authentication Components */
+.auth-container {
+    padding: 40px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.auth-tabs {
+    display: flex;
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.auth-tab.active {
+    background-color: white;
+    color: #2563eb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.checkbox input {
+    width: auto;
+}
+
+.forgot-password {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.btn-auth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+.auth-divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e5e7eb;
+}
+
+.auth-divider span {
+    background-color: white;
+    padding: 0 15px;
+    color: #6b7280;
+    font-size: 14px;
+    position: relative;
+}
+
+.social-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-btn {
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-btn.google {
+    color: #db4437;
+}
+
+.social-btn.linkedin {
+    color: #0077b5;
+}
+
+.social-btn:hover {
+    border-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.user-type-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.user-type {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.user-type.active {
+    border-color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.05);
+    transform: translateY(-5px);
+}
+
+.user-type i {
+    font-size: 24px;
+    color: #9ca3af;
+    margin-bottom: 10px;
+}
+
+.user-type.active i {
+    color: #2563eb;
+}
+
+.user-type span {
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.user-type.active span {
+    color: #2563eb;
+}
+
+/* Form Validation Styles */
+.form-group.error input {
+    border-color: #ef4444;
+}
+
+.form-group.success input {
+    border-color: #10b981;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.success-message {
+    color: #10b981;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-group.success .success-message {
+    display: block;
+}
+
+/* Loading States */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: slideInRight 0.3s ease;
+    max-width: 350px;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toast.success {
+    border-left: 4px solid #10b981;
+}
+
+.toast.error {
+    border-left: 4px solid #ef4444;
+}
+
+.toast.info {
+    border-left: 4px solid #3b82f6;
+}
+
+.toast-icon {
+    font-size: 20px;
+}
+
+.toast.success .toast-icon {
+    color: #10b981;
+}
+
+.toast.error .toast-icon {
+    color: #ef4444;
+}
+
+.toast.info .toast-icon {
+    color: #3b82f6;
+}
+
+.toast-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.toast-content p {
+    font-size: 13px;
+    color: #6b7280;
+}
